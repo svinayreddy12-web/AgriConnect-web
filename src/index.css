@@ -1,0 +1,392 @@
+/* =========================================
+   AGRICONNECT - GLOBAL STYLES
+   ========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+  background: #f4f8f3;
+  color: #222;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* =========================================
+   GLOBAL VARIABLES
+   ========================================= */
+
+:root {
+  --agri-green: #176b36;
+  --agri-dark-green: #14532d;
+  --agri-light-green: #e9f5eb;
+  --agri-soft-green: #dff1e2;
+  --agri-hover-green: #dcefe0;
+  --agri-bg: #f4f8f3;
+  --agri-border: #dfe8df;
+  --agri-text: #1f2937;
+  --agri-muted: #6b7280;
+  --agri-danger: #dc2626;
+  --agri-warning: #d97706;
+  --agri-white: #ffffff;
+}
+
+/* =========================================
+   FORM ELEMENTS
+   ========================================= */
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+button {
+  min-height: 40px;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--agri-green);
+  outline-offset: 2px;
+}
+
+input,
+textarea,
+select {
+  max-width: 100%;
+  border: 1px solid #d6e1d6;
+  border-radius: 8px;
+  background: #ffffff;
+  color: var(--agri-text);
+  padding: 10px 12px;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #9ca3af;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #6da477;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(23, 107, 54, 0.08);
+}
+
+/* =========================================
+   GLOBAL BACK BUTTON
+   Use this style on every module
+   ========================================= */
+
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  min-height: 60px;
+  min-width: 121px;
+
+  padding: 0 22px;
+
+  border: none;
+  border-radius: 14px;
+
+  background: #e9f5eb;
+  color: #176b36;
+
+  font-size: 18px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow: none;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.back-button:hover {
+  background: #dcefe0;
+  color: #14532d;
+}
+
+.back-button:active {
+  background: #d4ead8;
+  transform: scale(0.98);
+}
+
+.back-button:focus-visible {
+  outline: 2px solid #176b36;
+  outline-offset: 3px;
+}
+
+/* =========================================
+   COMMON PAGE CONTAINERS
+   ========================================= */
+
+.page-container,
+.dashboard-page,
+.crops-page,
+.marketplace-page,
+.market-prices-page,
+.orders-page,
+.weather-page,
+.profile-page,
+.notifications-page,
+.help-page,
+.harvest-page {
+  min-height: 100vh;
+}
+
+/* =========================================
+   COMMON CARD EFFECTS
+   ========================================= */
+
+.dashboard-card,
+.stat-card,
+.summary-card,
+.notification-card,
+.product-card,
+.crop-card,
+.order-card,
+.harvest-card,
+.weather-card,
+.market-card {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* =========================================
+   IMAGES
+   ========================================= */
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* =========================================
+   LINKS
+   ========================================= */
+
+a {
+  color: inherit;
+}
+
+/* =========================================
+   TABLES
+   ========================================= */
+
+table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+}
+
+th {
+  font-weight: 700;
+}
+
+th,
+td {
+  padding: 11px 12px;
+  text-align: left;
+}
+
+/* =========================================
+   SCROLLBAR
+   ========================================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #eef4ed;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b8cdb9;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #91ad94;
+}
+
+/* =========================================
+   MOBILE - GENERAL
+   ========================================= */
+
+@media (max-width: 900px) {
+  table {
+    font-size: 14px;
+  }
+
+  th,
+  td {
+    padding: 9px 8px;
+  }
+}
+
+/* =========================================
+   MOBILE - 600px AND BELOW
+   ========================================= */
+
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+    overflow-x: hidden;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  h4 {
+    font-size: 16px;
+  }
+
+  button {
+    font-size: 14px;
+  }
+
+  input,
+  textarea,
+  select {
+    font-size: 16px;
+  }
+
+  table {
+    font-size: 13px;
+  }
+
+  th,
+  td {
+    padding: 8px 6px;
+  }
+
+  /* =====================================
+     MOBILE BACK BUTTON
+     Same design, full width where needed
+     ===================================== */
+
+  .back-button {
+    min-height: 60px;
+    min-width: 121px;
+
+    padding: 0 22px;
+
+    border-radius: 14px;
+
+    font-size: 18px;
+    font-weight: 700;
+  }
+}
+
+/* =========================================
+   VERY SMALL MOBILE - 380px AND BELOW
+   ========================================= */
+
+@media (max-width: 380px) {
+  body {
+    font-size: 13px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  h2 {
+    font-size: 19px;
+  }
+
+  h3 {
+    font-size: 17px;
+  }
+
+  button {
+    font-size: 13px;
+  }
+
+  .back-button {
+    min-height: 56px;
+    min-width: 115px;
+
+    padding: 0 20px;
+
+    border-radius: 13px;
+
+    font-size: 17px;
+  }
+}
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (min-width: 601px) and (max-width: 900px) {
+  body {
+    font-size: 15px;
+  }
+}
+
+/* =========================================
+   DESKTOP
+   ========================================= */
+
+@media (min-width: 901px) {
+  body {
+    font-size: 16px;
+  }
+}

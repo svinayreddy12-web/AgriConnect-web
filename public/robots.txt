@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://agriconnect-ae7f4.web.app/sitemap.xml
